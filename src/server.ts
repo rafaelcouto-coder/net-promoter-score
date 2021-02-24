@@ -1,18 +1,13 @@
 import 'reflect-metadata'
-import express, { request, response } from 'express';
+import express from "express";
 import "./database";
+import { router } from './router';
 
 const app = express();
 
+app.use(express.json())
+
+app.use(router);
+
 app.listen(3333, () => console.log('server is running'));
 
-// http://localhost:3333/
-app.get("/", (request, response) => {
-  return response.json({massage: "Hello world"});
-})
-
-//1 param: rota
-//2 param: req resp
-app.post("/", (request, response) => {
-  return response.json({massage: "Os dados foram salvos com sucesso!"});
-})

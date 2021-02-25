@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { json, Request, Response } from "express";
 import { getCustomRepository } from "typeorm";
 import { SurveysRepository } from "../repositories/SurveysRepository";
 import { UsersRepository } from "../repositories/UsersRepository";
@@ -26,7 +26,7 @@ class UserController {
 
         await usersRepository.save(user);
 
-        return response.json(user);
+        return response.status(201).json(user);
     }
 }
 

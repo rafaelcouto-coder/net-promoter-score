@@ -2,6 +2,7 @@ import { getCustomRepository, Not, IsNull } from "typeorm";
 import { SurveysUsersRepository } from "../repositories/SurveysUsersRepository";
 import { Request, Response } from "express";
 
+
 class NpsController {
     async execute(request: Request, response: Response){
         const { survey_id } = request.params;

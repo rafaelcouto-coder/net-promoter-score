@@ -1,3 +1,3 @@
-# nlw4-api
+# Net Promoter Score
 
 Projeto resultado da Semana NLW #4
